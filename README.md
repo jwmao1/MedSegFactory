@@ -44,6 +44,10 @@ MedSegFactory unlocks on-demand generation of paired medical images and segmenta
 
 <img src="./docs/images/examples.jpg" width="1080"/>
 
+## 🙏 Acknowledgement
+
+Deeply appreciate these wonderful open source projects: [stablediffusion](https://github.com/Stability-AI/StableDiffusion), [clip](https://github.com/openai/CLIP), [controlnet](https://github.com/lllyasviel/ControlNet), [diffboost](https://github.com/NUBagciLab/DiffBoost), [maisi](https://github.com/Project-MONAI/tutorials/tree/main/generation/maisi), [nnunet](https://github.com/MIC-DKFZ/nnUNet).
+
 ## 🩺 Citation 
 
 If you find this repository useful, please consider giving a star ⭐ and citation 💓:
