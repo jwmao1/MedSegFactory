@@ -26,7 +26,7 @@ MedSegFactory unlocks on-demand generation of paired medical images and segmenta
 
 ## 🔥 News/TODO
 - [x] [Paper](https://arxiv.org/abs/2504.06897) is released on ArXiv.
-- [x] Source code of [gradio demo](https://huggingface.co/spaces/JohnWeck/medsegfactory).
+- [x] Source code of [gradio demo](https://huggingface.co/spaces/JohnWeck/medsegfactory/tree/main).
 - [ ] Code released.
 - [ ] Pretrained weight of MedSegFactory.
 - [ ] Pretrained weights of nnUNet for MedSegFactory.
