@@ -38,7 +38,6 @@ class MedicalPipeline:
 
         self.BUSI = {0: 'normal', 1: 'breast tumor'}
         self.CVC_ClinicDB = {1: 'polyp'}
-        self.kvasir_seg = {1: 'polyp'}
 
         self.LiTS2017 = {1: 'liver', 2: 'liver tumor'}
         self.KiTS2019 = {1: 'kidney', 2: 'kidney tumor'}
@@ -53,7 +52,6 @@ class MedicalPipeline:
         return images
 
     def map_to_classes(self, label_array, max_pixel):
-        """将标签值映射到 [0, 1, 2, ..., num_classes-1] 范围"""
         return np.clip(np.round(label_array * (max_pixel)), 0, max_pixel).astype(np.uint8)
 
     def get_random_values(self, my_dict):
@@ -86,7 +84,7 @@ class MedicalPipeline:
         if prompts is None:
             if not isinstance(keys, List):
                 if keys is None:
-                    idx = random.randint(1, 7)
+                    idx = random.randint(1, 6)
                     if idx == 1:
                         keys = 'AMOS2022'
                         organ = 'abdomen CT scans'
@@ -116,18 +114,12 @@ class MedicalPipeline:
                         img_prompt = [f'a photo of {organ} image, with {kind}.'] * num_samples
                         mask_prompt = [f'a photo of {organ} label, with {kind}.'] * num_samples
                     elif idx == 5:
-                        keys = 'kvasir-seg'
-                        organ = 'polyp colonoscopy'
-                        kind = 'polyp'
-                        img_prompt = [f'a photo of {organ} image, with {kind}.'] * num_samples
-                        mask_prompt = [f'a photo of {organ} label, with {kind}.'] * num_samples
-                    elif idx == 6:
                         keys = 'LiTS2017'
                         organ = 'abdomen CT scans'
                         kind = self.get_random_values(self.LiTS2017)
                         img_prompt = [f'a photo of {organ} image, with {kind}.'] * num_samples
                         mask_prompt = [f'a photo of {organ} label, with {kind}.'] * num_samples
-                    elif idx == 7:
+                    elif idx == 6:
                         keys = 'KiTS2019'
                         organ = 'abdomen CT scans'
                         kind = self.get_random_values(self.KiTS2019)
@@ -153,9 +145,6 @@ class MedicalPipeline:
                         organ = 'cardiovascular ventricle mri'
                         kind = self.get_random_values(self.ACDC)
                     elif keys == 'CVC-ClinicDB':
-                        organ = 'polyp colonoscopy'
-                        kind = 'polyp'
-                    elif keys == 'kvasir-seg':
                         organ = 'polyp colonoscopy'
                         kind = 'polyp'
                     elif keys == 'LiTS2017':
@@ -235,8 +224,6 @@ class MedicalPipeline:
         elif keys == 'BUSI':
             label = self.map_to_classes(label, 1)
         elif keys == 'CVC-ClinicDB':
-            label = self.map_to_classes(label, 1)
-        elif keys == 'kvasir-seg':
             label = self.map_to_classes(label, 1)
         elif keys == 'LiTS2017':
             label = self.map_to_classes(label, 2)
