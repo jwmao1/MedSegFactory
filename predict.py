@@ -63,9 +63,9 @@ def parse_args():
         right adrenal gland, left adrenal gland, gall bladder, esophagus, stomach, duodenum, left kidney, bladder, prostate}],
         ACDC: [organ:cardiovascular ventricle mri, kind:{right ventricle, myocardium, left ventricle}],
         BUSI: [organ:breast ultrasound, kind:{normal, breast tumor}],
-        CVC_ClinicDB: [organ:polyp colonoscopy, kind:{polyp}],
-        LiTS2017: [organ:polyp colonoscopy, kind:{liver, liver tumor}],
-        KiTS2019: [organ:polyp colonoscopy, kind:{kidney, kidney tumor'}]
+        CVC-ClinicDB: [organ:polyp colonoscopy, kind:{polyp}],
+        LiTS2017: [organ:abdomen CT scans, kind:{liver, liver tumor}],
+        KiTS2019: [organ:abdomen CT scans, kind:{kidney, kidney tumor'}]
         Follow the tips to use the organ and kind combinations correctly.'''
 
     )
@@ -112,7 +112,7 @@ pipe = StableDiffusionPipeline.from_pretrained(
 
 pipeline = MedicalPipeline(pipe, device)
 
-keys = ['AMOS2022', 'BUSI', 'ACDC', 'CVC-ClinicDB', 'LiTS2017', 'KiTS2019']
+# keys ['AMOS2022', 'BUSI', 'ACDC', 'CVC-ClinicDB', 'LiTS2017', 'KiTS2019']
 
 if args.mode == 'key':
     image, label = pipeline.generate(args.key)
