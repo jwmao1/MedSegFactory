@@ -1,0 +1,21 @@
+accelerate==0.28.0
+bitsandbytes==0.45.2
+braceexpand==0.1.7
+diffusers==0.27.2
+h5py==3.12.1
+huggingface_hub==0.26.0
+matplotlib==3.10.0
+nibabel==5.3.2
+numpy==1.26.3
+packaging==24.2
+Pillow==11.1.0
+safetensors==0.5.2
+SimpleITK==2.4.1
+scikit-image==0.21.0
+tqdm==4.67.1
+transformers==4.49.0
+webdataset==0.2.110
+torch==2.2.2
+torchvision==0.17.2
+torchaudio==2.2.2
+--extra-index-url https://download.pytorch.org/whl/cu121
