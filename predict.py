@@ -38,7 +38,7 @@ def parse_args():
         "--mode",
         type=str,
         default="key",
-        choices=["key","pronpt"],
+        choices=["key","prompt"],
         help="predict mode",
     )
     parser.add_argument(
