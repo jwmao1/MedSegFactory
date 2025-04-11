@@ -27,8 +27,9 @@ MedSegFactory unlocks on-demand generation of paired medical images and segmenta
 ## 🔥 News/TODO
 - [x] [Paper](https://arxiv.org/abs/2504.06897) is released on ArXiv.
 - [x] Source code of [gradio demo](https://huggingface.co/spaces/JohnWeck/medsegfactory/tree/main).
-- [ ] Code released.
-- [ ] Pretrained weight of MedSegFactory.
+- [x] Code released.
+- [x] Pretrained weight of [MedSegFactory](https://huggingface.co/JohnWeck/StableDiffusion/resolve/main/checkpoint-300.pth).
+- [ ] Training code.
 - [ ] Pretrained weights of nnUNet for MedSegFactory.
 
 ## 🧑‍⚕️ Framework 
@@ -38,6 +39,30 @@ MedSegFactory unlocks on-demand generation of paired medical images and segmenta
 
 <img src="./docs/images/framework.jpg" width="950"/>
 
+## 💉 Quick Start 
+**</h2>Quickly Run</h2>**
+- Install these libraries: 
+  ```shell
+      # create new anaconda env
+          conda create -n MedSeg python=3.10
+          conda activate MedSeg 
+
+      # install packages
+          pip install -r requirements.txt
+
+-  running the demo from the following choice: 
+    ```shell
+        # 1. key: AMOS2022; organ: abdomen CT scans; kind: {liver, right kidney, spleen, pancreas, aorta, inferior vena cava, right adrenal gland, left adrenal gland, gall bladder, esophagus, stomach, duodenum, left kidney, bladder, prostate}. 2. key: ACDC; organ: cardiovascular ventricle MRI; kind: {right ventricle, myocardium, left ventricle}. 3. key: BUSI; organ: breast ultrasound; kind:{normal, breast tumor}. 4. key: CVC-ClinicDB; organ: polyp colonoscopy; kind:{polyp}. 5. key: LiTS2017; organ: abdomen CT scans; kind:{liver, liver tumor}. 6. key: KiTS2019; organ: abdomen CT scans; kind:{kidney, kidney tumor}.
+        # using random prompt with specific key via key mode
+        python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode key --key [customized key]
+        # For example:
+        python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode key --key BUSI
+    
+        # using customized prompt via prompt mode
+        python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode prompt --organ [customized organ] --kind [customized kind]
+        # For example:
+        python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode prompt --organ ACDC --kind right ventricle,myocardium,left ventricle
+    
 ## 🚑 Performance 
 
 ### Examples 
