@@ -57,15 +57,8 @@ class MedicalPipeline:
         return np.clip(np.round(label_array * (max_pixel)), 0, max_pixel).astype(np.uint8)
 
     def get_random_values(self, my_dict):
-        """
-        随机从字典中选择一个或多个不重复的值
-        :param my_dict: 字典
-        :return: 随机选择的一个或多个不重复的值的列表
-        """
-        values_list = list(my_dict.values())  # 获取字典的所有值并转换为列表
-        # 随机决定选择一个还是多个值
-        num_choices = random.randint(1, len(values_list))  # 随机选择1到len(values_list)个值
-        # 使用 random.sample() 来确保不重复选择
+        values_list = list(my_dict.values()) 
+        num_choices = random.randint(1, len(values_list))  
         kinds = random.sample(values_list, num_choices)
         kind = ''
 
