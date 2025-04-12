@@ -72,9 +72,9 @@ MedSegFactory unlocks on-demand generation of paired medical images and segmenta
         python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode key --key BUSI
     
         # using customized prompt via prompt mode
-        python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode prompt --organ [customized organ] --kind [customized kind]
+        python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode prompt --key [customized key] --organ [customized organ] --kind [customized kind]
         # For example:
-        python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode prompt --organ ACDC --kind "right ventricle,myocardium,left ventricle"
+        python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode prompt --key ACDC --organ "cardiovascular ventricle MRI" --kind "right ventricle,myocardium,left ventricle"
     
 ## 🚑 Performance 
 
