@@ -91,7 +91,7 @@ MedSegFactory unlocks on-demand generation of paired medical images and segmenta
             --medsegfactory_ckpt [medsegfactory ckpt] \
             --mode prompt \
             --organ ACDC \
-            --kind right ventricle,myocardium,left ventricle
+            --kind "right ventricle,myocardium,left ventricle"
 
 
     
