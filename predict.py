@@ -125,7 +125,7 @@ if args.mode == 'key':
     plt.savefig('pred.png', bbox_inches='tight', pad_inches=0)
     plt.show()
 elif args.mode == 'prompt':
-    prompt = {'organ':args.organ, 'kind':args.kind}
+    prompt = {'key':args.key, 'organ':args.organ, 'kind':args.kind}
     image, label = pipeline.generate(prompt)
     plt.subplot(1, 2, 1)
     plt.imshow(image)
