@@ -52,16 +52,48 @@ MedSegFactory unlocks on-demand generation of paired medical images and segmenta
 
 -  running the demo from the following choice: 
     ```shell
-        # 1. key: AMOS2022; organ: abdomen CT scans; kind: {liver, right kidney, spleen, pancreas, aorta, inferior vena cava, right adrenal gland, left adrenal gland, gall bladder, esophagus, stomach, duodenum, left kidney, bladder, prostate}. 2. key: ACDC; organ: cardiovascular ventricle MRI; kind: {right ventricle, myocardium, left ventricle}. 3. key: BUSI; organ: breast ultrasound; kind:{normal, breast tumor}. 4. key: CVC-ClinicDB; organ: polyp colonoscopy; kind:{polyp}. 5. key: LiTS2017; organ: abdomen CT scans; kind:{liver, liver tumor}. 6. key: KiTS2019; organ: abdomen CT scans; kind:{kidney, kidney tumor}.
+        # 1. key: AMOS2022; organ: abdomen CT scans; kind: 
+        #    {liver, right kidney, spleen, pancreas, aorta, inferior vena cava, 
+        #     right adrenal gland, left adrenal gland, gall bladder, esophagus, 
+        #     stomach, duodenum, left kidney, bladder, prostate}.
+        # 2. key: ACDC; organ: cardiovascular ventricle MRI; kind: 
+        #    {right ventricle, myocardium, left ventricle}.
+        # 3. key: BUSI; organ: breast ultrasound; kind:
+        #    {normal, breast tumor}.
+        # 4. key: CVC-ClinicDB; organ: polyp colonoscopy; kind:
+        #    {polyp}.
+        # 5. key: LiTS2017; organ: abdomen CT scans; kind:
+        #    {liver, liver tumor}.
+        # 6. key: KiTS2019; organ: abdomen CT scans; kind:
+        #    {kidney, kidney tumor}.
+
         # using random prompt with specific key via key mode
-        python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode key --key [customized key]
+        python predict.py \
+            --medsegfactory_ckpt [medsegfactory ckpt] \
+            --mode key \
+            --key [customized key]
+
         # For example:
-        python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode key --key BUSI
-    
+        python predict.py \
+            --medsegfactory_ckpt [medsegfactory ckpt] \
+            --mode key \
+            --key BUSI
+
         # using customized prompt via prompt mode
-        python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode prompt --organ [customized organ] --kind [customized kind]
+        python predict.py \
+            --medsegfactory_ckpt [medsegfactory ckpt] \
+            --mode prompt \
+            --organ [customized organ] \
+            --kind [customized kind]
+
         # For example:
-        python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode prompt --organ ACDC --kind right ventricle,myocardium,left ventricle
+        python predict.py \
+            --medsegfactory_ckpt [medsegfactory ckpt] \
+            --mode prompt \
+            --organ ACDC \
+            --kind "right ventricle,myocardium,left ventricle"
+
+
     
 ## 🚑 Performance 
 
