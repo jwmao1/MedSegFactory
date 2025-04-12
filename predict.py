@@ -126,7 +126,7 @@ if args.mode == 'key':
     plt.show()
 elif args.mode == 'prompt':
     prompt = {'key':args.key, 'organ':args.organ, 'kind':args.kind}
-    image, label = pipeline.generate(prompt)
+    image, label = pipeline.generate(prompts=prompt)
     plt.subplot(1, 2, 1)
     plt.imshow(image)
     plt.axis('off')
