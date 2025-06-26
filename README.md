@@ -30,7 +30,7 @@ MedSegFactory unlocks on-demand generation of paired medical images and segmenta
 - [x] Code released.
 - [x] Pretrained weight of [MedSegFactory](https://huggingface.co/JohnWeck/StableDiffusion/resolve/main/checkpoint-300.pth).
 - [x] Training code.
-- [ ] Pretrained weights of nnUNet for MedSegFactory.
+- [x] Pretrained weights of nnUNet for MedSegFactory.
 
 ## 🧑‍⚕️ Framework 
 
