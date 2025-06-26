@@ -29,7 +29,7 @@ MedSegFactory unlocks on-demand generation of paired medical images and segmenta
 - [x] Source code of [gradio demo](https://huggingface.co/spaces/JohnWeck/medsegfactory/tree/main).
 - [x] Code released.
 - [x] Pretrained weight of [MedSegFactory](https://huggingface.co/JohnWeck/StableDiffusion/resolve/main/checkpoint-300.pth).
-- [ ] Training code.
+- [x] Training code.
 - [ ] Pretrained weights of nnUNet for MedSegFactory.
 
 ## 🧑‍⚕️ Framework 
@@ -38,6 +38,18 @@ MedSegFactory unlocks on-demand generation of paired medical images and segmenta
 <br>
 
 <img src="./docs/images/framework.jpg" width="950"/>
+
+## 💊 Checkpoints
+you can download MedSegFactory checkpoint from [here](https://huggingface.co/JohnWeck/StableDiffusion/resolve/main/checkpoint-300.pth). Additionally, we provide the following nnUNet checkpoints:
+
+|       Model       | Dataset | DSC | IoU |   Huggingface Download URL    |
+|:-----------------:|:---:|:----:|:----:|:------------------------------------------------------------------------------------------------------:|
+| MedSegFactory+nnUNet | AMOS | 0.7679 | 0.7042 |[AMOS](https://huggingface.co/JohnWeck/MedSegFactory_nnUNet/tree/main/Dataset001_AMOS)        |
+| MedSegFactory+nnUNet | KiTS19 | 0.5803 | 0.5339 |[KiTS19](https://huggingface.co/JohnWeck/MedSegFactory_nnUNet/tree/main/Dataset005_KiTS)         |
+| MedSegFactory+nnUNet | LiTS17 | 0.6237 | 0.5690 |[LiTS17](https://huggingface.co/JohnWeck/MedSegFactory_nnUNet/tree/main/Dataset006_LiTS)           |
+| MedSegFactory+nnUNet | ACDC | 0.8802 | 0.8150 |[ACDC](https://huggingface.co/JohnWeck/MedSegFactory_nnUNet/tree/main/Dataset003_ACDC) |
+| MedSegFactory+nnUNet | BUSI | 0.8338 | 0.7875 |[BUSI](https://huggingface.co/JohnWeck/MedSegFactory_nnUNet/tree/main/Dataset002_BUSI)          |
+| MedSegFactory+nnUNet |  CVC-ClinicDB | 0.9085 | 0.8661 |[CVC-ClinicDB](https://huggingface.co/JohnWeck/MedSegFactory_nnUNet/tree/main/Dataset004_CVC)     |
 
 ## 💉 Quick Start 
 **</h2>Quickly Run</h2>**
@@ -75,6 +87,10 @@ MedSegFactory unlocks on-demand generation of paired medical images and segmenta
         python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode prompt --key [customized key] --organ [customized organ] --kind [customized kind]
         # For example:
         python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode prompt --key ACDC --organ "cardiovascular ventricle MRI" --kind "right ventricle,myocardium,left ventricle"
+    
+-  training the code with trai.
+    ```shell
+        python tutorial_train.py --data_root_path [your data path] --output_dir [your output path]
     
 ## 🚑 Performance 
 
