@@ -88,7 +88,7 @@ you can download MedSegFactory checkpoint from [here](https://huggingface.co/Joh
         # For example:
         python predict.py --medsegfactory_ckpt [medsegfactory ckpt] --mode prompt --key ACDC --organ "cardiovascular ventricle MRI" --kind "right ventricle,myocardium,left ventricle"
     
--  training the code with trai.
+-  training code:
     ```shell
         python tutorial_train.py --data_root_path [your data path] --output_dir [your output path]
     
