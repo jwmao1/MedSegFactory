@@ -40,7 +40,7 @@ MedSegFactory unlocks on-demand generation of paired medical images and segmenta
 <img src="./docs/images/framework.jpg" width="950"/>
 
 ## 💊 Checkpoints
-you can download MedSegFactory checkpoint from [here](https://huggingface.co/JohnWeck/StableDiffusion/resolve/main/checkpoint-300.pth). Additionally, we provide the following nnUNet checkpoints:
+You can download MedSegFactory checkpoint from [here](https://huggingface.co/JohnWeck/StableDiffusion/resolve/main/checkpoint-300.pth). The dataset can be downloaded from this [link](https://huggingface.co/datasets/JohnWeck/collection_slices). Additionally, we provide the following nnUNet checkpoints:
 
 |       Model       | Dataset | DSC | IoU |   Huggingface Download URL    |
 |:-----------------:|:---:|:----:|:----:|:------------------------------------------------------------------------------------------------------:|
