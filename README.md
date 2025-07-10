@@ -44,7 +44,7 @@ You can download MedSegFactory checkpoint from [here](https://huggingface.co/Joh
 
 |       Model       | Dataset | DSC | IoU |   Huggingface Download URL    |
 |:-----------------:|:---:|:----:|:----:|:------------------------------------------------------------------------------------------------------:|
-| MedSegFactory+nnUNet | AMOS | 0.7679 | 0.7042 |[AMOS](https://huggingface.co/JohnWeck/MedSegFactory_nnUNet/tree/main/Dataset001_AMOS)        |
+| MedSegFactory+nnUNet | AMOS | 0.7676 | 0.7048 |[AMOS](https://huggingface.co/JohnWeck/MedSegFactory_nnUNet/tree/main/Dataset001_AMOS)        |
 | MedSegFactory+nnUNet | KiTS19 | 0.5803 | 0.5339 |[KiTS19](https://huggingface.co/JohnWeck/MedSegFactory_nnUNet/tree/main/Dataset005_KiTS)         |
 | MedSegFactory+nnUNet | LiTS17 | 0.6237 | 0.5690 |[LiTS17](https://huggingface.co/JohnWeck/MedSegFactory_nnUNet/tree/main/Dataset006_LiTS)           |
 | MedSegFactory+nnUNet | ACDC | 0.8802 | 0.8150 |[ACDC](https://huggingface.co/JohnWeck/MedSegFactory_nnUNet/tree/main/Dataset003_ACDC) |
