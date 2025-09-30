@@ -10,7 +10,7 @@
 <a href="https://huggingface.co/spaces/JohnWeck/medsegfactory"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Demo-blue" height=22.5></a>
 </span>
 
-Code for the paper [MedSegFactory: Text-Guided Generation of Medical Image-Mask Pairs](https://arxiv.org/abs/2504.06897) will be available soon. 
+Code for the paper [MedSegFactory: Text-Guided Generation of Medical Image-Mask Pairs](https://arxiv.org/abs/2504.06897). 
 
 ### About this repo:
 
